@@ -1,0 +1,100 @@
+<br><br><br>
+<div class="container">
+
+    <h1>Registration</h1>
+    <br>
+    <p>Registration your accaount.  It is free and only it takes a minute
+    </p>
+    <br><br>
+    <form [formGroup]="myForm" (ngSubmit)="onsubmit()" novalidate>
+
+
+        <div class="MiniContainer">
+
+                <div class="mb-3"> 
+                
+                    <input minlength="6" maxlength="15"  class="form-control" formControlName="name" id="name" type="text" name="name" required >
+                
+
+
+                    <div class="invalied1" role="alert" *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+                        Write your  Username !</div>
+
+
+
+                    <div class="invalied2" *ngIf="!myForm.get('name')?.invalid && myForm.get('name')?.touched">
+                    UserName should consist of 6 words to 16  !</div>
+
+
+
+                </div>
+
+                <div class="mb-3"> 
+                
+                    <input minlength="6" maxlength="15"   class="form-control" formControlName="name1" id="name1" type="text" name="name1" required >
+                
+
+                    <div  class="invalied1" role="alert" *ngIf="myForm.get('name1')?.invalid && myForm.get('name1')?.touched">
+                        Write your Last name !</div>
+
+                    <div  class="invalied2" *ngIf="!myForm.get('name1')?.invalid && myForm.get('name1')?.touched">
+                    Last Name should consist of 6 words to 16 !</div>
+
+                </div>
+
+        </div>
+
+
+
+        <div class="mb-3"> 
+                
+            <input  minlength="6" maxlength="15"  class="form-control" formControlName="email" id="email" type="text" name="email" required >
+        
+
+
+            <div class="invalied1" role="alert"*ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+                Email Required  ! </div>
+
+
+            <div  class="invalied2"role="alert"*ngIf="!myForm.get('email')?.invalid && myForm.get('email')?.touched">
+            there should be "&#64;"  and  email should consist of 6 words to 16 ! </div>
+
+        </div>
+
+
+        <div class="mb-3"> 
+                
+            <input placeholder="Password"  minlength="5" maxlength="10"  class="form-control" formControlName="password" id="password" type="password" name="password" required >
+         
+
+            <div class="invalied1" role="alert" *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
+                Password Required ! </div>
+    
+            <div  class="invalied2" role="alert" *ngIf="!myForm.get('password')?.invalid && myForm.get('password')?.touched">
+            Password should consist of 5 words to 10  ! </div>
+
+        </div>
+
+        <div class="mb-3"> 
+                
+            <input  placeholder=" Confirm Password"  minlength="5" maxlength="10"   class="form-control" formControlName="password1" id="password1" type="password" name="password1" required >
+        
+
+            <div class="invalied1" role="alert" *ngIf="myForm.get('password1')?.invalid && myForm.get('password1')?.touched">
+                 Confirm Password Required ! </div>
+
+
+            <div   class="invalied2" role="alert" *ngIf="!myForm.get('password1')?.invalid && myForm.get('password1')?.touched">
+                Confirm Password should consist of 5 words to 10  ! </div>
+
+     
+
+        </div>
+
+        <br><br>
+        <input class="btn btn-danger"  value="Register Now" type="submit" [disabled]="myForm.invalid">
+
+
+        <!-- <p class="forget-password"> Forget my password</p> -->
+    </form>
+</div>

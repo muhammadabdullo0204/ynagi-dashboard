@@ -1,0 +1,127 @@
+
+<div class="chips">
+    <h1 class="basic-text">Chips</h1>
+
+  <!-- <div class="container"> -->
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <div class="basic">
+                <h1>Basic</h1>
+                <hr>
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option>One fish</mat-chip-option>
+                    <mat-chip-option>Two fish</mat-chip-option>
+                    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+                    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+                  </mat-chip-listbox>
+          </div>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+
+            <div class="avatar">
+                <h1>Avatar</h1>
+                <hr>
+                <mat-chip-set aria-label="Dog selection">
+                    <mat-chip>
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog one
+                    </mat-chip>
+                    <mat-chip color="primary">
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog two
+                    </mat-chip>
+                    <mat-chip color="accent">
+                      <img matChipAvatar src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
+                      Dog three
+                    </mat-chip>
+                  </mat-chip-set>
+            </div>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+
+            <div class="Drag">
+                <h1>Drag in Drop</h1>
+                <hr>
+                <mat-chip-set
+                class="example-chip"
+                cdkDropList
+                cdkDropListOrientation="horizontal"
+                 >
+                @for (vegetable of vegetables; track vegetable) {
+                  <mat-chip class="example-box" cdkDrag>{{vegetable.name}}</mat-chip>
+                }
+              </mat-chip-set>
+            </div>
+
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+            <div class="stacked">
+                <h1>Stacked</h1>
+                <hr>
+                <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+                    @for (chip of availableColors; track chip) {
+                      <mat-chip-option selected [color]="chip.color">{{chip.name}}</mat-chip-option>
+                    }
+                  </mat-chip-listbox>
+            </div>
+        
+
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+
+ 
+
+
+
+
+
+
+
+
+      <mat-grid-list cols="1" rowHeight="6:1">
+        <mat-grid-tile>  <div class="Input">
+            <form>
+
+                <h1>Input</h1>
+                <hr>
+                <mat-form-field class="example-chip-list">
+                  <mat-label>Favorite Fruits</mat-label>
+                  <mat-chip-grid #chipGrid aria-label="Fruit selection">
+                    @for (fruit of fruits; track fruit) {
+                      <mat-chip-row (removed)="remove(fruit)">
+                        {{fruit}}
+                        <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                      </mat-chip-row>
+                    }
+                  </mat-chip-grid>
+                  <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
+                    [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    (matChipInputTokenEnd)="add($event)"/>
+                  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                    @for (fruit of filteredFruits | async; track fruit) {
+                      <mat-option [value]="fruit">{{fruit}}</mat-option>
+                    }
+                  </mat-autocomplete>
+                </mat-form-field>
+              </form>
+        </div></mat-grid-tile>
+   
+      </mat-grid-list>
+
+
+  
+  <!-- </div> -->
+
+</div>

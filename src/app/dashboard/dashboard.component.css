@@ -1,0 +1,263 @@
+
+.dashboard{
+ 
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 150px;
+ left: 150px;
+ 
+
+    
+}
+.myChart1{
+width: 900px;
+
+}
+.myDoughnutChart1{
+    width: 225px;
+}
+.myDoughnutChartReverse1{
+    width: 225px;
+}
+.myDoughnutChart1{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Schedules{
+
+    position: relative;
+    left: 550px;
+    bottom: 600px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.upcomingSchedule{
+
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 8px 8px 38px -11px rgba(66, 68, 90, 1);
+        width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    
+}
+.upcomingSchedule h2{
+    display: inline;
+  
+}
+/* .timebox{
+
+} */
+.time{
+    display: flex;
+    width: 300px;
+    gap: 10px;
+    
+}
+.cicrle{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid blue;
+}
+
+.cicrle1{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid brown;
+}
+
+.cicrle2{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid green;
+}
+
+.cicrle3{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid yellow;
+}
+
+.cicrle4{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid coral;
+}
+
+
+.cicrle5{
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid green;
+}
+
+
+.TopPayingClients{
+    border-radius: 15px;
+    box-shadow: 8px 8px 38px -11px rgba(66, 68, 90, 1);
+
+    width: 800px;
+}
+.TopPayingClients h2{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+table tr td p{
+    font-weight: lighter;
+    opacity: .8;
+}
+table{
+    margin-left: 30px;
+}
+
+table tr td{
+    width: 200px;
+}
+
+.Available p{
+    background-color: rgb(173, 238, 173);
+    color: green;
+    border-radius: 20px;
+width: 60px;
+height: 20px;
+}
+.Class p{
+    background-color: lightblue;
+    color: blue;
+    border-radius: 20px;
+width: 60px;
+text-align: center;
+height: 20px;
+}
+.absent p{
+    background-color: rgb(226, 141, 141);
+    color: red;
+    border-radius: 20px;
+width: 60px;
+text-align: center;
+height: 20px;
+}
+.leave p{
+    background-color: rgb(228, 147, 118);
+    color: brown;
+    border-radius: 20px;
+width: 60px;
+height: 20px;
+text-align: center;
+}
+.price{
+    position: relative;
+    left: 30px;
+}
+
+.Containers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.boxes{
+
+    width: 420px;
+    height: 520px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+
+ 
+    border-radius: 15px;
+    box-shadow: 8px 8px 38px -11px rgba(66, 68, 90, 1);
+
+}
+.boxes img{
+    height: 420px;
+    width: 420px;
+
+}
+.texts{
+
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.Mini-text{
+display: flex;
+gap: 20px;
+}
+.Mini-text p:nth-child(1){
+
+    text-decoration: line-through;
+
+}
+.Mini-text p:nth-child(2){
+
+    text-decoration: line-through;
+
+}
+
+.star1{
+    cursor: pointer;
+
+    margin-left: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star2{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star3{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star4{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star5{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}

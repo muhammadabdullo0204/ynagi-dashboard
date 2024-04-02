@@ -1,0 +1,26 @@
+.Sample{
+    width: 1200px;
+    height: 125px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    box-shadow: 0px -1px 39px -20px rgba(66, 68, 90, 1);
+    margin-left: 50px;
+    position: relative;
+    top: 150px;
+    left: 150px;
+
+}
+
+.sample-box{
+
+}
+.sample-box h1{
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.sample-box h3{
+    margin-top: 20px;
+    margin-left: 20px;
+
+}

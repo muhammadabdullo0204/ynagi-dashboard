@@ -1,0 +1,110 @@
+
+.chips{
+    border-radius: 10px;
+    box-shadow: 0px -1px 39px -20px rgba(66, 68, 90, 1);
+
+
+ 
+    position: relative;
+    top: 150px;
+ left: 200px;
+    width: 1200px;
+    height: 900px;
+}
+.basic-text{
+    margin-left: 50px;
+   position: relative;
+   top: 20px;
+}
+
+.example-box.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-chip .cdk-drop-list-dragging {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .mat-mdc-chip-set {
+
+  }
+
+  .container{
+display: flex;
+  }
+
+  .basic{
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    border:  solid 0.5px black;
+
+  }
+  .basic mat-chip-listbox {
+    margin-left: 20px;
+  }
+  .basic h1{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .avatar{
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    border:  solid 0.5px black;
+
+  }
+  .avatar h1{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  mat-chip-set{
+    margin-left: 20px;
+  }
+
+
+  .Drag{
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    border:  solid 0.5px black;
+
+  }
+  .Drag h1{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .stacked{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    border:  solid 0.5px black;
+
+  }
+  .stacked h1{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .mat-mdc-chip-set-stacked{
+width: 450px;
+margin-left: 20px;
+  }
+
+
+  .Input form{
+    border-radius: 10px;
+ border: solid 0.5px black;
+ width: 1100px;
+  }
+
+  .Input form h1{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .example-chip-list{
+
+    width: 1000px;
+    margin-left: 20px;
+  }

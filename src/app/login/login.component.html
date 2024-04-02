@@ -1,0 +1,82 @@
+<!-- <div >
+
+</div> -->
+
+<!-- <form (ngSubmit)="onsubmit()">
+
+    <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required>
+
+    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+
+    <button type="submit">Login</button>
+</form> -->
+
+
+
+
+<br><br><br>
+<div class="container">
+
+    <h1>Login</h1>
+    <br>
+    <p>Login your accaount.  It is free and only it takes a minute
+    </p>
+    <br><br>
+    <form [formGroup]="myForm" (ngSubmit)="onsubmit()" novalidate>
+
+
+        <div class="MiniContainer">
+
+                <div class="mb-3"> 
+                
+                    <input placeholder="Username ni kiriting" minlength="5" maxlength="15"  class="form-control"  [(ngModel)]="name" formControlName="name" id="name" type="text" name="name" required >
+                
+
+
+                    <div class="invalied1" role="alert" *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+                        Write your  Username !</div>
+
+
+
+                    <div class="invalied2" *ngIf="!myForm.get('name')?.invalid && myForm.get('name')?.touched">
+                    UserName should consist of 5 words to 16  !</div>
+
+
+
+                </div>
+
+            
+
+        </div>
+
+
+
+
+        <div class="mb-3"> 
+                
+            <input placeholder="Password"  minlength="5" maxlength="10"  class="form-control" formControlName="password" [(ngModel)]="password" id="password" type="password" name="password" required >
+         
+
+            <div class="invalied1" role="alert" *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
+                Password Required ! </div>
+    
+            <div  class="invalied2" role="alert" *ngIf="!myForm.get('password')?.invalid && myForm.get('password')?.touched">
+            Password should consist of 5 words to 10  ! </div>
+
+        </div>
+
+
+        <br><br>
+        <input class="btn btn-danger"  value="Login Now" type="submit" [disabled]="myForm.invalid">
+
+
+        <p class="forget-password"> Forget my password</p>
+        <br>
+        <p routerLink="/register" class="create-account">I don't have an account ,  create a new one</p>
+    </form>
+</div>
+
+
+
+  
+  
