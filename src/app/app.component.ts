@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'amalyot-3';
 
+  
 
+  sidebarEx: boolean = false;
 
 }

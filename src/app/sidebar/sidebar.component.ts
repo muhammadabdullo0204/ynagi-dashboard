@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
 
 @Component({
@@ -8,11 +8,12 @@ import { SidebarService } from '../sidebar.service';
 })
 export class SidebarComponent {
 
-
-  isOpen: boolean = false;
-
-  constructor(private sidebarService: SidebarService) {
-    this.sidebarService.isOpen$.subscribe(isOpen => this.isOpen = isOpen);
+  @Input() isExpend: boolean = false;
+  @Output() toggle: EventEmitter<boolean> = new EventEmitter<boolean>();
+  
+  toggleSidebar() {
+    this.toggle.emit(!this.isExpend);
   }
+
 
 }

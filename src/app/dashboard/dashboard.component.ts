@@ -11,6 +11,10 @@ export class DashboardComponent implements OnInit {
  
 
 
+
+  constructor() {
+  }
+
   backgroundcolor: string = '';
   backgroundcolor2: string = '';
   backgroundcolor3: string = '';

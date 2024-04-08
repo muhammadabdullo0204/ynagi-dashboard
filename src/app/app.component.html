@@ -10,9 +10,9 @@
 
 <div class="flex" >
     
-    <app-sidebar></app-sidebar>
+    <app-sidebar  [isExpend]="sidebarEx" (toggle)="sidebarEx = !sidebarEx"></app-sidebar>
 
-    <router-outlet class="router" />
+    <router-outlet />
 </div>
 
 

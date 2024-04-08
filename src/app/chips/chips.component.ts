@@ -67,7 +67,7 @@ export class ChipsComponent {
         this.isSmallScreen = matches;
         // Adjust row height based on screen size
         this.rowHeight = this.isSmallScreen ? '1:1' : '2:1'; // Set row height to '1:1' when isSmallScreen is true
-        this.gutterSize = this.isSmallScreen ? '-500px' : '0px'; // Set gutter size to '0px' when isSmallScreen is true
+        this.gutterSize = this.isSmallScreen ? '-500px' : '0px'; 
       });
 
   }
