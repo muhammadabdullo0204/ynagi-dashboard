@@ -1,16 +1,17 @@
 /* hamma kodlar tog'ri va matrial.angulardan ishlatilishi kerak */
 
 .myChart1{
-    width: 700px;
+    width: 800px;
     
 }
 .myDoughnutChart1{
-   width: 200px;
- border: solid;
+   width: 150px;
+
+
  }
  .myDoughnutChartReverse1{
- width: 200px;
-  border: solid;
+ width: 150px;
+
  }
  
   
@@ -27,7 +28,7 @@
     position: relative;
     left: 200px;
     top: 200px;
-    height: 2000px;
+    height: 2300px;
 
     width: 1200px;
     box-shadow: 0px -1px 39px -20px rgba(66, 68, 90, 1);
@@ -301,3 +302,87 @@ gap: 20px;
 
 
 
+@media only screen and (max-width: 768px) {
+      .dashboard{
+        position: absolute;
+        left: 25px;
+        width: 720px;
+        height: 2800px;
+      }
+
+      .schedule{
+
+ height: 700px;
+      }
+
+      .upcomingSchedule{
+        /* border: .5px solid black; */
+        width: 330px;
+        display: inline;
+        height: 350px;
+        box-shadow: 0px 0px 6px -1px rgba(66, 68, 90, 1);
+
+        
+
+      }
+      .upcomingSchedule h2{
+        position: relative;
+        left: 20px;
+        top: 10px;
+        /* display: block; */
+      }
+      .timebox{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+      }
+      .TopPayingClients-title{
+        height: 605px;
+      }
+      .TopPayingClients{
+        /* border: .5px solid black; */
+        width: 330px;
+        height: 600px;
+        box-shadow: 0px 0px 6px -1px rgba(66, 68, 90, 1);
+
+        
+
+      }
+      .boxes-title{
+
+        position: relative;
+        /* top: 220px; */
+        
+      }
+
+
+
+      .boxes{
+        
+        width: 350px;
+        height: 300px;
+        box-shadow: 0px 0px 6px -1px rgba(66, 68, 90, 1);
+
+
+      }
+      .boxes img{
+    height: 200px;
+    width: 350px;
+
+        }
+
+        .texts{
+    
+        }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+ 
+
+}

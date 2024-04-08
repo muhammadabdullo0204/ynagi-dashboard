@@ -3,7 +3,7 @@
 
 
     <h1 class="lists-h1">Lists</h1>
-    <mat-grid-list  cols="2" rowHeight="1.5:1">
+    <mat-grid-list [cols]="isSmallScreen ? 1 : 2"   [rowHeight]="rowHeight"   >
 
     
         <mat-grid-tile  class="basic">
@@ -56,7 +56,7 @@
 
             <div class="three-line-list">
                 <h1>Three line lists</h1>
-<hr>
+              <hr>
                 <mat-list>
                 
                 <mat-list-item>
@@ -157,11 +157,12 @@
 
 <br><br>
 
-    <mat-grid-list cols="1" rowHeight="3:1">
+    <mat-grid-list class="list-sections-title" [cols]="isSmallScreen ? 1 : 1"  cols="1" rowHeight="3:1">
 
         <h1 class="list-selection-h1">List with Sections</h1>
 
 
+        
 
         <mat-grid-tile class="list-sections">
 

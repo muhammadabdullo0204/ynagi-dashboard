@@ -1,0 +1,20 @@
+{
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    }
+}

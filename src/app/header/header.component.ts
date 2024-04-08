@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { SidebarService } from '../sidebar.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  constructor(private sidebarService: SidebarService) {}
+
+  toggleSidebar() {
+    this.sidebarService.toggle();
+    console.log("bosildi");
+  }
 
   logout() {
     localStorage.removeItem('token');

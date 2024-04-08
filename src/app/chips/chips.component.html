@@ -4,8 +4,8 @@
 
   <!-- <div class="container"> -->
 
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>
+    <mat-grid-list  class="boxes-title"   [cols]="isSmallScreen ? 1 : 2" [rowHeight]="rowHeight" [gutterSize]="gutterSize" >
+        <mat-grid-tile class="boxes-title-2">
             <div class="basic">
                 <h1>Basic</h1>
                 <hr>
@@ -17,7 +17,7 @@
                   </mat-chip-listbox>
           </div>
 
-        </mat-grid-tile>
+      </mat-grid-tile>
 
         <mat-grid-tile>
 
@@ -61,7 +61,7 @@
         </mat-grid-tile>
 
 
-        <mat-grid-tile>
+        <mat-grid-tile >
             <div class="stacked">
                 <h1>Stacked</h1>
                 <hr>
@@ -87,9 +87,9 @@
 
 
 
-      <mat-grid-list cols="1" rowHeight="6:1">
-        <mat-grid-tile>  <div class="Input">
-            <form>
+      <mat-grid-list style="margin-bottom:100px;" class="Input-title"   cols="1" rowHeight="6:1">
+        <mat-grid-tile class="Input-title-2">  <div class="Input">
+            <form >
 
                 <h1>Input</h1>
                 <hr>
@@ -116,7 +116,8 @@
                   </mat-autocomplete>
                 </mat-form-field>
               </form>
-        </div></mat-grid-tile>
+        </div>
+      </mat-grid-tile>
    
       </mat-grid-list>
 

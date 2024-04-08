@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration} from '@angular/platform-browser';
+import {  withFetch } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {  HttpClient } from '@angular/common/http';
-// import {provideHttpClient} from '@nguniversal/common';
-// import { withFetch } from '@nguniversal/common/fetch';
-// import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { BadgeComponent } from './badge/badge.component';
 import { ChipsComponent } from './chips/chips.component';
 import { ListsComponent } from './lists/lists.component';
@@ -53,27 +52,20 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatBadgeModule} from '@angular/material/badge';
 
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild, inject} from '@angular/core';
-import {FormControl, } from '@angular/forms';
-import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
-import {MatChipInputEvent} from '@angular/material/chips';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+
 import {AsyncPipe} from '@angular/common';
-import {LiveAnnouncer} from '@angular/cdk/a11y';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
-// import {CdkDragDrop, moveItemInArray, CdkDrag, CdkDropList} from '@angular/cdk/drag-drop';
-// import {ThemePalette} from '@angular/material/core';
-import {TooltipPosition} from '@angular/material/tooltip';
+
 import {CdkScrollable} from '@angular/cdk/scrolling';
 import { YangiDashboardComponent } from './yangi-dashboard/yangi-dashboard.component';
+import { provideHttpClient } from '@angular/common/http';
+// import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -150,7 +142,7 @@ import { YangiDashboardComponent } from './yangi-dashboard/yangi-dashboard.compo
     MatNativeDateModule,
     CommonModule,
     MatBadgeModule,
-    
+    BrowserAnimationsModule,
     
     MatFormFieldModule,
     MatChipsModule,
@@ -158,12 +150,16 @@ import { YangiDashboardComponent } from './yangi-dashboard/yangi-dashboard.compo
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
+    
+    // CanvasJSAngularChartsModule
   ],
   
   providers: [
-    provideClientHydration(),
-    provideAnimationsAsync(),
-    // provideHttpClient({ useFetch: withFetch() })
+    [provideHttpClient(withFetch())]
+
+
+    // provideClientHydration(),
+
   ],
   bootstrap: [AppComponent]
 })

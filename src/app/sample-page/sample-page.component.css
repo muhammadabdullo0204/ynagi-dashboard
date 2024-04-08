@@ -24,3 +24,25 @@
     margin-left: 20px;
 
 }
+@media only screen and (max-width: 768px) {
+     
+
+
+  
+    .Sample{
+        width: 720px;
+        position: relative;
+        left: -340px;
+
+    }
+
+
+
+
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+  
+  
+  }

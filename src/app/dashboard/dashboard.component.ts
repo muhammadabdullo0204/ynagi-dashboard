@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit,  ElementRef } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -7,16 +8,8 @@ import { Chart } from 'chart.js/auto';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+ 
 
-  // @ViewChild('myChart') myChartCanvas!: ElementRef;
-  // @ViewChild('myDoughnutChart') myDoughnutChartCanvas!: ElementRef;
-  // @ViewChild('myDoughnutChartReverse') myDoughnutChartReverseCanvas!: ElementRef;
-
-
-
-  constructor(){
-
-  }
 
   backgroundcolor: string = '';
   backgroundcolor2: string = '';
@@ -123,99 +116,102 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.createBarChart();
-    // this.createDoughnutChart();
-    // this.createDoughnutChartReverse();
+
     
+    // new Chart("myChart", {
+    //   type: 'bar',
+    //   data: {
+    //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [12, 19, 3, 5, 2, 3],
+    //       borderWidth: 1
+    //     }]
+    //   },
+    //   options: {
+    //     scales: {
+    //       y: {
+    //         beginAtZero: true
+    //       }
+    //     }
+    //   }
+    // });
+
+
+
+    // new Chart("myDoughnutChart", {
+    //   type: 'doughnut',
+    //   data: {
+    //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [12, 19, 3, 5, 2, 3],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.5)',
+    //         'rgba(54, 162, 235, 0.5)',
+    //         'rgba(255, 206, 86, 0.5)',
+    //         'rgba(75, 192, 192, 0.5)',
+    //         'rgba(153, 102, 255, 0.5)',
+    //         'rgba(255, 159, 64, 0.5)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)'
+    //       ],
+    //       borderWidth: 1
+    //     }]
+    //   },
+    //   options: {
+    //     responsive: true
+    //   }
+    // });
+
+
+    // new Chart("myDoughnutChartReverse", {
+    //   type: 'doughnut',
+    //   data: {
+    //     labels: ['Orange', 'Purple', 'Green', 'Red', 'Blue', 'Yellow'],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       data: [3, 2, 5, 12, 19, 3],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.5)',
+    //         'rgba(54, 162, 235, 0.5)',
+    //         'rgba(255, 206, 86, 0.5)',
+    //         'rgba(75, 192, 192, 0.5)',
+    //         'rgba(153, 102, 255, 0.5)',
+    //         'rgba(255, 159, 64, 0.5)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)'
+    //       ],
+    //       borderWidth: 1
+    //     }]
+    //   },
+    //   options: {
+    //     responsive: true
+    //   }
+    // });
+
+
+
+
+   
   }
 
-  // createBarChart() {
-  //   new Chart(this.myChartCanvas.nativeElement, {
-  //     type: 'bar',
-  //     data: {
-  //       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  //       datasets: [{
-  //         label: '# of Votes',
-  //         data: [12, 19, 3, 5, 2, 3],
-  //         borderWidth: 1
-  //       }]
-  //     },
-  //     options: {
-  //       scales: {
-  //         y: {
-  //           beginAtZero: true
-  //         }
-  //       }
-  //     }
-  //   });
-  // }
+ 
 
-  // createDoughnutChart() {
-  //   new Chart(this.myDoughnutChartCanvas.nativeElement, {
-  //     type: 'doughnut',
-  //     data: {
-  //       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  //       datasets: [{
-  //         label: '# of Votes',
-  //         data: [12, 19, 3, 5, 2, 3],
-  //         backgroundColor: [
-  //           'rgba(255, 99, 132, 0.5)',
-  //           'rgba(54, 162, 235, 0.5)',
-  //           'rgba(255, 206, 86, 0.5)',
-  //           'rgba(75, 192, 192, 0.5)',
-  //           'rgba(153, 102, 255, 0.5)',
-  //           'rgba(255, 159, 64, 0.5)'
-  //         ],
-  //         borderColor: [
-  //           'rgba(255, 99, 132, 1)',
-  //           'rgba(54, 162, 235, 1)',
-  //           'rgba(255, 206, 86, 1)',
-  //           'rgba(75, 192, 192, 1)',
-  //           'rgba(153, 102, 255, 1)',
-  //           'rgba(255, 159, 64, 1)'
-  //         ],
-  //         borderWidth: 1
-  //       }]
-  //     },
-  //     options: {
-  //       responsive: true
-  //     }
-  //   });
-  // }
 
-  // createDoughnutChartReverse() {
-  //   new Chart(this.myDoughnutChartReverseCanvas.nativeElement, {
-  //     type: 'doughnut',
-  //     data: {
-  //       labels: ['Orange', 'Purple', 'Green', 'Red', 'Blue', 'Yellow'],
-  //       datasets: [{
-  //         label: '# of Votes',
-  //         data: [3, 2, 5, 12, 19, 3],
-  //         backgroundColor: [
-  //           'rgba(255, 99, 132, 0.5)',
-  //           'rgba(54, 162, 235, 0.5)',
-  //           'rgba(255, 206, 86, 0.5)',
-  //           'rgba(75, 192, 192, 0.5)',
-  //           'rgba(153, 102, 255, 0.5)',
-  //           'rgba(255, 159, 64, 0.5)'
-  //         ],
-  //         borderColor: [
-  //           'rgba(255, 99, 132, 1)',
-  //           'rgba(54, 162, 235, 1)',
-  //           'rgba(255, 206, 86, 1)',
-  //           'rgba(75, 192, 192, 1)',
-  //           'rgba(153, 102, 255, 1)',
-  //           'rgba(255, 159, 64, 1)'
-  //         ],
-  //         borderWidth: 1
-  //       }]
-  //     },
-  //     options: {
-  //       responsive: true
-  //     }
-  //   });
-  // }
-
+  
 
 
 }

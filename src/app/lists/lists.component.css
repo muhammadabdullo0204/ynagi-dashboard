@@ -106,3 +106,52 @@
     margin-top: 20px;
   
 }
+
+@media only screen and (max-width: 768px) {
+     
+
+
+    .lists{
+
+        height: 4300px;
+        width: 720px;
+        position: relative;
+        left: -340px;
+    }
+  
+
+    .list-sections-title{
+        height: 500px;
+    }
+    .list-sections{
+
+ 
+        height: 300px;
+        width: 700px;
+    }
+
+    .list-sections-list{
+        width: 700px;
+        height: 300px;
+    }
+    
+
+    .list-note{
+        width: 700px;
+        height: 300px;
+        position: relative;
+        top: 100px;
+    }
+    .list-note-list{
+        width: 700px;
+        height: 300px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+  
+  
+
+
+  }

@@ -1,5 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { map } from 'rxjs/operators';
 
 
 
@@ -8,26 +10,37 @@ import { Chart } from 'chart.js/auto';
   templateUrl: './yangi-dashboard.component.html',
   styleUrl: './yangi-dashboard.component.css'
 })
-export class YangiDashboardComponent implements OnInit {
+export class YangiDashboardComponent implements AfterViewInit {
 
 
-    @ViewChild('myChart') myChartCanvas!: ElementRef;
-  @ViewChild('myDoughnutChart') myDoughnutChartCanvas!: ElementRef;
-  @ViewChild('myDoughnutChartReverse') myDoughnutChartReverseCanvas!: ElementRef;
-  ngOnInit(): void {
-        this.createBarChart();
-    this.createDoughnutChart();
-    this.createDoughnutChartReverse();
+    
+  @ViewChild('myChart') myChartRef!: ElementRef;
+  @ViewChild('myDoughnutChart') myDoughnutChartRef!: ElementRef;
+  @ViewChild('myDoughnutChartReverse') myDoughnutChartReverseRef!: ElementRef;
+
+  isSmallScreen: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
+      .pipe(
+        map(result => result.matches)
+      )
+      .subscribe(matches => {
+        this.isSmallScreen = matches;
+      });
   }
 
+  
+  ngAfterViewInit(): void {
 
 
-  constructor(){
 
-  }
 
-    createBarChart() {
-    new Chart(this.myChartCanvas.nativeElement, {
+    const chartCtx: CanvasRenderingContext2D = this.myChartRef.nativeElement.getContext('2d');
+    const doughnutCtx: CanvasRenderingContext2D = this.myDoughnutChartRef.nativeElement.getContext('2d');
+    const doughnutReverseCtx: CanvasRenderingContext2D = this.myDoughnutChartReverseRef.nativeElement.getContext('2d');
+
+    new Chart(chartCtx, {
       type: 'bar',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -45,10 +58,8 @@ export class YangiDashboardComponent implements OnInit {
         }
       }
     });
-  }
 
-  createDoughnutChart() {
-    new Chart(this.myDoughnutChartCanvas.nativeElement, {
+    new Chart(doughnutCtx, {
       type: 'doughnut',
       data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -78,10 +89,8 @@ export class YangiDashboardComponent implements OnInit {
         responsive: true
       }
     });
-  }
 
-  createDoughnutChartReverse() {
-    new Chart(this.myDoughnutChartReverseCanvas.nativeElement, {
+    new Chart(doughnutReverseCtx, {
       type: 'doughnut',
       data: {
         labels: ['Orange', 'Purple', 'Green', 'Red', 'Blue', 'Yellow'],
@@ -111,13 +120,15 @@ export class YangiDashboardComponent implements OnInit {
         responsive: true
       }
     });
+
+    this.performNotImplementedAction();
   }
 
 
-
-
-
-
+  performNotImplementedAction(): void {
+    // Implement the missing functionality here or remove this method call
+    console.error('NotYetImplemented: This action is not yet implemented.');
+  }
 
 
 

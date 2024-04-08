@@ -12,8 +12,13 @@
 }
 .myChart1{
 width: 900px;
+border-radius: solid black 5px;
+background-color: black;
+height: 400px;
 
 }
+
+
 .myDoughnutChart1{
     width: 225px;
 }

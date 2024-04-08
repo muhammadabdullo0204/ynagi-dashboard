@@ -108,3 +108,58 @@ margin-left: 20px;
     width: 1000px;
     margin-left: 20px;
   }
+  @media only screen and (max-width: 768px) {
+     
+
+  
+    .chips{
+      height: 1800px;
+      width: 720px;
+      position: relative;
+      left: -290px;
+    }
+  
+    .basic-text{
+  
+      
+    }
+    .Input-title{
+  
+
+ 
+    }
+      .boxes-title{
+
+
+      }
+      .boxes-title-2{
+   
+      }
+    .Input-title-2{
+      height: 250px;
+  
+
+ 
+    }
+    .Input{
+
+      position: relative;
+      top: 10px;
+      width: 650px;
+
+    }
+    .Input form{
+    
+    width: 650px;
+    }
+    .example-chip-list{
+      width: 600px;
+    }
+    
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+  
+  
+  }

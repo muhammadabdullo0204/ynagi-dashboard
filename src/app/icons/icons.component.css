@@ -28,3 +28,35 @@ iframe{
     /* margin-left: 25px; */
 
 }
+@media only screen and (max-width: 768px) {
+     
+
+
+  
+    .icons-container{
+        width: 720px;
+        position: relative;
+        left: -340px;
+        height: 650px;
+    }
+
+
+    .iframe-list{
+        margin-top: 20px;
+        height: 500px;
+    }
+    iframe{
+ 
+        height: 500px;
+      
+    
+    }
+
+
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+  
+  
+  }

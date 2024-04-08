@@ -1,6 +1,7 @@
 
 
 .header{
+
     float:right ;
     margin-right: 200px;
         display: flex;
@@ -20,6 +21,9 @@
     
     }
     
+    .MENU{
+        display: none;
+    }
     .notification{
         cursor: pointer;
         margin-left: 30px
@@ -66,5 +70,33 @@
     /* .logout{
     
     } */
+
+
+    @media only screen and (max-width: 768px) {
+      
+        .header{
+            width: 720px;
+            position: relative;
+            left: 180px;
+
+        }
+
+        .MENU{
+
+            display: inline;
+        }
+        .notification{
+
     
+        }
+        .pro{
     
+            margin-left:350px; 
+        }
+    }
+    
+  
+    @media only screen and (max-width: 480px) {
+     
+
+    }

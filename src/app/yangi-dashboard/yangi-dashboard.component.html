@@ -6,16 +6,23 @@
     <h1 class="profit"> Profit & Expenses</h1>
 
     <mat-grid-list cols="4" rowHeight="200px">
-        <mat-grid-tile colspan="3" rowspan="4">
-          <canvas #myChart></canvas>
+        <mat-grid-tile colspan="4" rowspan="4">
+
+
+          <canvas class="myChart1" #myChart></canvas>
+
         </mat-grid-tile>
         
-        <mat-grid-tile colspan="1" rowspan="2">
-          <canvas #myDoughnutChart></canvas>
+        <mat-grid-tile colspan="2" rowspan="2">
+
+          <canvas class="myDoughnutChart1" #myDoughnutChart></canvas>
+
         </mat-grid-tile>
         
-        <mat-grid-tile colspan="1" rowspan="2">
-          <canvas #myDoughnutChartReverse></canvas>
+        <mat-grid-tile colspan="2" rowspan="2">
+
+          <canvas class="myDoughnutChartReverse1" #myDoughnutChartReverse></canvas>
+
         </mat-grid-tile>
       </mat-grid-list>
       
@@ -25,7 +32,7 @@
       <br><br><br>
 
 
-      <div class="schedule">
+     <div class="schedule">
 
         
       <mat-grid-list cols="2" rowHeight="1:1">
@@ -85,7 +92,7 @@
         </mat-grid-tile>
      <!-- </div> -->
 
-        <mat-grid-tile>
+        <mat-grid-tile class="TopPayingClients-title">
 
             <div class="TopPayingClients">
 
@@ -169,7 +176,7 @@
 
     <br><br><br>
 
-    <mat-grid-list cols="4" rowHeight="1:1">
+    <mat-grid-list [cols]="isSmallScreen ? 2 : 4" class="boxes-title" cols="4" rowHeight="1:1">
         <!-- <div class="Containers"> -->
 
 
@@ -198,7 +205,7 @@
         </mat-grid-tile>
         <mat-grid-tile>
             <div class="boxes">
-                <img width="200px" height="200px" src="https://spike-angular-free.netlify.app/assets/images/products/p1.jpg" alt="">
+                <img width="200px" height="200px" src="https://spike-angular-free.netlify.app/assets/images/products/p2.jpg" alt="">
         
                 <div class="texts">
                     <p>Red Valvet Dress</p>

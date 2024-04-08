@@ -2,12 +2,18 @@
 <div class="header">
 
     <div class="notification">
+      
+      <button (click)="toggleSidebar()" class="MENU" mat-icon-button aria-label="Example icon-button with a menu">   <mat-icon  >menu</mat-icon> 
+      </button>
+
       <button mat-icon-button aria-label="Example icon-button with a menu">   <mat-icon >notifications_active</mat-icon> 
       </button>
+
+
     </div>
   
     <div class="pro">
-      <h3>Upgrade to Pro</h3>
+      <h3 >Upgrade to Pro</h3>
       
   
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">

@@ -1,6 +1,6 @@
   <div class="Tooltip"> 
 
-    <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-list cols="3"  [cols]="isSmallScreen ? 1.5 : 3" [rowHeight]="rowHeight" >
 
 
         <h1 class="Tooltips">Tooltips</h1>
@@ -54,7 +54,7 @@
 
     </mat-grid-list>
 
-    <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-list cols="2"   [cols]="isSmallScreen1 ? 1 : 2 " [rowHeight]="rowHeight1">
   
         <mat-grid-tile>
 
