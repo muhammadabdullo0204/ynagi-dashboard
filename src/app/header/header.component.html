@@ -12,7 +12,9 @@
     </div>
   
     <div class="pro">
-      <h3 >Upgrade to Pro</h3>
+      <button (click)="toggleSidebar()"  class="MENU" mat-icon-button aria-label="Example icon-button with a menu">   <mat-icon  >menu</mat-icon> 
+      </button>
+            <h3 >Upgrade to Pro</h3>
       
   
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,14 +8,13 @@ import { SidebarService } from '../sidebar.service';
   styleUrl: './sidebar.component.css'
 }) 
 export class SidebarComponent implements OnInit {
-  sidebarWidth: string = '300px'; 
+  
+  translateX$: Observable<string>;
 
-  translateX: string = 'translateX(0px)'; // Initial translation value
-
-  toggleSidebar() {
-    // Toggle translation value between '-300px' and '0px'
-    this.translateX = this.translateX === 'translateX(-320px)' ? 'translateX(0px)' : 'translateX(-320px)';
+  constructor(private sidebarService: SidebarService) {
+    this.translateX$ = this.sidebarService.translateX$;
   }
+
 
   ngOnInit() {}
 

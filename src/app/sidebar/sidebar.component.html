@@ -3,7 +3,7 @@
 
 <!-- [style.width]="sidebarWidth"  -->
 
-<div class="sidebar"   [style.transform]="translateX" [style.transition]="'transform 0.3s'">
+<div class="sidebar" [style.transform]="(translateX$ | async)" [style.transition]="'transform 0.3s'">
 
 
     <div class="Container">
@@ -16,8 +16,7 @@
       </div>
   
 
-      <button (click)="toggleSidebar()"  class="MENU" mat-icon-button aria-label="Example icon-button with a menu">   <mat-icon  >menu</mat-icon> 
-      </button>
+
 
 
   

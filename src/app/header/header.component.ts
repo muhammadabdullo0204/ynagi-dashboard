@@ -10,10 +10,14 @@ export class HeaderComponent implements OnInit {
 
 
 
-  ngOnInit() {}
+  constructor(private sidebarService: SidebarService) { }
 
+  ngOnInit(): void {
+  }
 
-
+  toggleSidebar() {
+    this.sidebarService.toggleSidebar();
+  }
 
   logout() {
     localStorage.removeItem('token');
