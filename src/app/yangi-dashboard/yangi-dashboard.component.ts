@@ -127,7 +127,7 @@ export class YangiDashboardComponent implements AfterViewInit {
 
   performNotImplementedAction(): void {
     // Implement the missing functionality here or remove this method call
-    console.error('NotYetImplemented: This action is not yet implemented.');
+
   }
 
 

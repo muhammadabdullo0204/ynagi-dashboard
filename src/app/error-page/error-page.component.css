@@ -41,7 +41,8 @@
     .page_404{
         width: 720px;
         position: relative;
-        left: -240px;
+        left: 25px;
+        top: 170px;
 
     }
 

@@ -6,12 +6,10 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SidebarService {
 
+
+
+
   constructor() { }
   
-  private isOpenSubject = new BehaviorSubject<boolean>(false);
-  isOpen$ = this.isOpenSubject.asObservable();
 
-  toggle() {
-    this.isOpenSubject.next(!this.isOpenSubject.value);
-  }
 }

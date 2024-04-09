@@ -12,6 +12,5 @@ export class AppComponent {
 
   
 
-  sidebarEx: boolean = false;
 
 }

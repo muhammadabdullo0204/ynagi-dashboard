@@ -1,9 +1,9 @@
 
 
 
+<!-- [style.width]="sidebarWidth"  -->
 
-
-<div class="sidebar"  [ngClass]="{'ex1': isExpend}">
+<div class="sidebar"   [style.transform]="translateX" [style.transition]="'transform 0.3s'">
 
 
     <div class="Container">
@@ -15,6 +15,11 @@
         <h3>Venasoft Admin</h3>
       </div>
   
+
+      <button (click)="toggleSidebar()"  class="MENU" mat-icon-button aria-label="Example icon-button with a menu">   <mat-icon  >menu</mat-icon> 
+      </button>
+
+
   
       <div class="home">
         <h5>HOME</h5>

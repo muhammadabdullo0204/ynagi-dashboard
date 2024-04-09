@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
 
 @Component({
@@ -6,14 +6,14 @@ import { SidebarService } from '../sidebar.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  constructor(private sidebarService: SidebarService) {}
 
-  toggleSidebar() {
-    this.sidebarService.toggle();
-    console.log("bosildi");
-  }
+
+  ngOnInit() {}
+
+
+
 
   logout() {
     localStorage.removeItem('token');

@@ -116,7 +116,8 @@ margin-left: 20px;
       height: 1800px;
       width: 720px;
       position: relative;
-      left: -290px;
+      left: 25px;
+      top: 170px;
     }
   
     .basic-text{

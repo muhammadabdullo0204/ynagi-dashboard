@@ -36,8 +36,9 @@ iframe{
     .icons-container{
         width: 720px;
         position: relative;
-        left: -340px;
+        left: -25px;
         height: 650px;
+        top: 170px;
     }
 
 

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { BadgeComponent } from './badge/badge.component';
 import { ChipsComponent } from './chips/chips.component';
 import { ListsComponent } from './lists/lists.component';

@@ -48,7 +48,9 @@ height: 500px;
   .BADGE{
     width: 720px;
     position: relative;
-    left: -290px;
+    left: 25px;
+    top: 170px;
+
   }
   .demo-section{
     width: 670px;
