@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   onsubmit() {
+
     if (this.myForm.valid) {
       const { name, password } = this.myForm.value;
       this.autService.login(name, password).subscribe(
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
             // Token saved
             this.autService.saveToken(data.token);
             // Navigate
-            this.router.navigate(['/home']);
+            this.router.navigate(['/yangidashboard']);
           } else {
             console.log("Login error");
           }
