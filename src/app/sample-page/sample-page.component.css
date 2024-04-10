@@ -33,7 +33,6 @@
         width: 720px;
         position: relative;
         left: -25px;
-        top: 170px;
 
     }
 
@@ -45,5 +44,11 @@
   
   @media only screen and (max-width: 480px) {
   
+    .Sample{
+        width: 450px;
+        position: relative;
+        left: -30px;
   
+
+    }
   }

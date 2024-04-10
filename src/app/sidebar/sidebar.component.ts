@@ -8,13 +8,14 @@ import { Observable } from 'rxjs';
   styleUrl: './sidebar.component.css'
 }) 
 export class SidebarComponent implements OnInit {
-  
+
   translateX$: Observable<string>;
 
   constructor(private sidebarService: SidebarService) {
     this.translateX$ = this.sidebarService.translateX$;
   }
 
+  
 
   ngOnInit() {}
 

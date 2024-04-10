@@ -14,7 +14,7 @@ export class SidebarService {
   
   toggleSidebar() {
     const currentValue = this._translateXSubject.getValue();
-    const newValue = currentValue === 'translateX(-320px)' ? 'translateX(0px)' : 'translateX(-320px)';
+    const newValue = currentValue === 'translateX(-320px)' ? 'translateX(-20px)' : 'translateX(-320px)';
     this._translateXSubject.next(newValue);
   }
 

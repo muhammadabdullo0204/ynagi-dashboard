@@ -18,7 +18,10 @@ export class YangiDashboardComponent implements AfterViewInit {
   @ViewChild('myDoughnutChart') myDoughnutChartRef!: ElementRef;
   @ViewChild('myDoughnutChartReverse') myDoughnutChartReverseRef!: ElementRef;
 
+
+
   isSmallScreen: boolean = false;
+  isSmallScreen1: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
@@ -26,7 +29,15 @@ export class YangiDashboardComponent implements AfterViewInit {
         map(result => result.matches)
       )
       .subscribe(matches => {
-        this.isSmallScreen = matches;
+        this.isSmallScreen1 = matches; // Assign to isSmallScreen1 variable
+      });
+
+    this.breakpointObserver.observe('(max-width: 480px)')
+      .pipe(
+        map(result => result.matches)
+      )
+      .subscribe(matches => {
+        this.isSmallScreen = matches; // Assign to isSmallScreen variable
       });
   }
 

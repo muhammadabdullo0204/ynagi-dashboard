@@ -153,7 +153,7 @@ height: 200px;
         width: 720px;
         position: relative;
         left: -25px;
-        top: 170px;
+   
     }
 
     .basic-menu{
@@ -178,6 +178,21 @@ height: 200px;
   
   
   @media only screen and (max-width: 480px) {
-  
+    .MENU{
+        width: 450px;
+
+    }
+    .position-mat{
+
+   
+        width: 450px;
+
+    }
+    .menu-position-box{
+        width: 450px;
+    }
+
+
+
   
   }

@@ -12,8 +12,8 @@ import { map } from 'rxjs/operators';
 })
 export class MenuComponent {
   isSmallScreen: boolean = false;
-  rowHeight: string = '3:1'; // Default row height
-
+  rowHeight: string = '1:2'; // Default row height
+  gutterSize: string = '0px'; // Default gutter size
   constructor(private breakpointObserver: BreakpointObserver) {
     
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
@@ -24,6 +24,9 @@ export class MenuComponent {
         this.isSmallScreen = matches;
         // Adjust row height based on screen size
         this.rowHeight = this.isSmallScreen ? '1:1' : '2:1';
+
+        this.gutterSize = this.isSmallScreen ? '-225px' : '0px'; 
+
       });
 
 

@@ -1,6 +1,6 @@
   <div class="Tooltip"> 
 
-    <mat-grid-list cols="3"  [cols]="isSmallScreen ? 1.5 : 3" [rowHeight]="rowHeight" >
+    <mat-grid-list   [cols]="isXSmallScreen ? 1 : (isSmallScreen ? 1.5 : 3)" [rowHeight]="rowHeight" >
 
 
         <h1 class="Tooltips">Tooltips</h1>
@@ -54,7 +54,7 @@
 
     </mat-grid-list>
 
-    <mat-grid-list cols="2"   [cols]="isSmallScreen1 ? 1 : 2 " [rowHeight]="rowHeight1">
+    <mat-grid-list    [cols]="isXSmallScreen3 ? 1 : (isSmallScreen1 ? 1 : 2)"   [rowHeight]="rowHeight1">
   
         <mat-grid-tile>
 
@@ -118,7 +118,7 @@
 
     </mat-grid-list>
 
-    <mat-grid-list cols="1" rowHeight="4:1">
+    <mat-grid-list  [cols]="isXSmallScreen5 ? 1 : (isSmallScreen5 ? 1 : 1)"  cols="1" [rowHeight]="rowHeight5" >
         <mat-grid-tile>
             <div class="change-tool">
             <h2>Change Message</h2>

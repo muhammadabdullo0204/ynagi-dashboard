@@ -5,7 +5,7 @@
 
     <h1 class="profit"> Profit & Expenses</h1>
 
-    <mat-grid-list cols="4" rowHeight="200px">
+    <mat-grid-list  cols="4" rowHeight="200px"  >
         <mat-grid-tile colspan="4" rowspan="4">
 
 
@@ -35,7 +35,7 @@
      <div class="schedule">
 
         
-      <mat-grid-list cols="2" rowHeight="1:1">
+      <mat-grid-list cols="2" rowHeight="1:1"  [cols]="isSmallScreen ? 1 : (isSmallScreen1 ? 2 : 2)" >
 
          <!-- <div class="Schedule"> -->
        
@@ -176,11 +176,11 @@
 
     <br><br><br>
 
-    <mat-grid-list [cols]="isSmallScreen ? 2 : 4" class="boxes-title" cols="4" rowHeight="1:1">
+    <mat-grid-list class="box-list"  [cols]="isSmallScreen ? 1 : (isSmallScreen1 ? 2 : 4)" class="boxes-title" cols="4" rowHeight="1:1">
         <!-- <div class="Containers"> -->
 
 
-        <mat-grid-tile>
+        <mat-grid-tile class="box-list-2">
             <div class="boxes">
                 <img width="200px" height="200px" src="https://spike-angular-free.netlify.app/assets/images/products/p1.jpg" alt="">
         

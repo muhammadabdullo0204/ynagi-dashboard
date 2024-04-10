@@ -10,7 +10,7 @@
    
     border: 1px solid   lightgray;
     box-shadow: 8px 9px 24px -12px rgba(66, 68, 90, 1);
- 
+    border: .5px solid black;
     text-align: center;
 
 }
@@ -114,5 +114,32 @@ form{
 
 @media only screen and (max-width: 480px) {
  
+    .container{
+        position: relative;
+        left: 17px;
 
+        width: 450px;
+
+        
+    }
+
+    input{
+        width: 440px;
+    }
+    .mb-3{
+        width: 440px;
+    }
+
+
+    .invalied1{
+  
+        
+        width: 440px;
+
+    }
+    .invalied2{
+ 
+        width: 440px;
+
+    }
 }

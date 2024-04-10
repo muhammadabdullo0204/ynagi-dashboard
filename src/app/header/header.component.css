@@ -99,6 +99,33 @@
     
   
     @media only screen and (max-width: 480px) {
+        .header{
+            width: 450px;
+            position: relative;
+            left: 190px;
+
+
+
+        }
+
+        .MENU{
+            order: 1;
+        }
+
+        .pro{
+    
+            margin-left:160px; 
+            gap: 0px;
+        }
+
+        .pro h3{
+ 
+            width: 100px;
+            height: 30px;
      
+            font-size: small;
+        }
+
+
 
     }

@@ -1,6 +1,6 @@
 <div class="icons-container">
 
-    <mat-grid-list cols="1" rowHeight="10:1">
+    <mat-grid-list cols="1" [rowHeight]="isSmallScreen1 ? '5:1' : '10:1'">
 
         <mat-grid-tile>
   
@@ -26,7 +26,7 @@
 
     
 
-    <mat-grid-list class="iframe-list" cols="1" rowHeight="2:1">
+    <mat-grid-list class="iframe-list" cols="1"  [rowHeight]="isSmallScreen ? '1:1' : '2:1'">
         <mat-grid-tile>
             <iframe src="https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/" ></iframe>
         </mat-grid-tile>

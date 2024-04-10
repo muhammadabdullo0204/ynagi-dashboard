@@ -38,7 +38,7 @@ iframe{
         position: relative;
         left: -25px;
         height: 650px;
-        top: 170px;
+     
     }
 
 
@@ -60,4 +60,24 @@ iframe{
   @media only screen and (max-width: 480px) {
   
   
+    .icons-container{
+        width: 450px;
+        position: relative;
+        left: -30px;
+        height: 650px;
+    }
+
+
+
+    .iframe-list{
+        /* margin-top: 20px; */
+        /* height: 500px; */
+    }
+    iframe{
+ 
+        /* height: 500px; */
+      
+    
+    }
+
   }

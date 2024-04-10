@@ -385,4 +385,23 @@ gap: 20px;
 @media only screen and (max-width: 480px) {
  
 
+    .dashboard{
+        width: 450px;
+        position: relative;
+        left: 20px;
+        font-size: small;
+        height: 4300px;
+    }
+
+
+
+    /* .box-list{
+        position: relative;
+        top: 300px;
+    } */
+
+    .box-list-2{
+        position: relative;
+        top: 300px;
+    }
 }

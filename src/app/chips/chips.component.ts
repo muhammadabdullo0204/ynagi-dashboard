@@ -47,8 +47,11 @@ export class ChipsComponent {
   announcer = inject(LiveAnnouncer);
 
   isSmallScreen: boolean = false;
+  isSmallScreen1: boolean = false;
   rowHeight: string = '2:1'; // Default row height
   gutterSize: any = '0px'; // Default gutter size
+
+
   constructor(private breakpointObserver: BreakpointObserver) {
 
 
@@ -63,12 +66,27 @@ export class ChipsComponent {
       .pipe(
         map(result => result.matches)
       )
+      
       .subscribe(matches => {
         this.isSmallScreen = matches;
         // Adjust row height based on screen size
-        this.rowHeight = this.isSmallScreen ? '1:1' : '2:1'; // Set row height to '1:1' when isSmallScreen is true
-        this.gutterSize = this.isSmallScreen ? '-500px' : '0px'; 
+        this.rowHeight = this.isSmallScreen1 ? '1:1' : '2:1'; // Set row height to '1:1' when isSmallScreen is true
+        this.gutterSize = this.isSmallScreen ? '0px' : '0px'; 
       });
+
+
+      // this.breakpointObserver.observe('(max-width: 480px)')
+      // .pipe(
+      //   map(result => result.matches)
+      // )
+      // .subscribe(matches => {
+      //   this.isSmallScreen = matches; // Assign to isSmallScreen variable
+      //   if (matches) {
+      //     this.gutterSize = '0px'; // Adjust gutter size for 480px width
+      //   } else {
+      //     this.gutterSize = '16px'; // Default gutter size
+      //   }
+      // });
 
   }
 
